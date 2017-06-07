@@ -11,6 +11,33 @@
   {{/frost-popover}}
 {{/frost-button}}
 
+{{#frost-button hook='siblingListButton' size='small' priority='primary' class='list' text='List Tooltip'}}
+  {{#frost-popover
+    target='.list'
+    closest=true
+    position='bottom'
+  }}
+    <div class="inside">
+        <ul>
+          <li role='button' {{action 'onCreate' 'One'}}>One</li>
+          <li role='button' {{action 'onCreate' 'Two'}}>Two</li>
+          <li role='button' {{action 'onCreate' 'Three'}}>Three</li>
+        </ul>
+      </div>
+  {{/frost-popover}}
+{{/frost-button}}
+
+<button>
+  <div class="inside">
+    <ul>
+      <li role='button' {{action 'onCreate' 'One'}}>One</li>
+      <li role='button' {{action 'onCreate' 'Two'}}>Two</li>
+      <li role='button' {{action 'onCreate' 'Three'}}>Three</li>
+    </ul>
+  </div>
+  My Test
+</button>
+
 <h2>Positions</h2>
 
 {{#frost-button hook='topButton' size='small' priority='primary' class='button-top' text='Top'}}

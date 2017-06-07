@@ -132,6 +132,7 @@ export default Component.extend(PropTypeMixin, {
 
     if (this.get('closest')) {
       $elements = this.$().closest(target)
+console.log('target: ', target)
     } else if (parent && parent.$) {
       $elements = parent.$(target)
     } else {
