@@ -11,32 +11,51 @@
   {{/frost-popover}}
 {{/frost-button}}
 
-{{#frost-button hook='siblingListButton' size='small' priority='primary' class='list' text='List Tooltip'}}
+{{frost-button hook='siblingListButton' size='small' priority='primary' class='list' text='List Tooltip'}}
+{{#frost-popover
+  target='.list'
+  position='bottom'
+}}
+  <div class="inside">
+      <ul>
+        <li role='button' {{action 'onCreate' 'One'}}>One</li>
+        <li role='button' {{action 'onCreate' 'Two'}}>Two</li>
+        <li role='button' {{action 'onCreate' 'Three'}}>Three</li>
+      </ul>
+    </div>
+{{/frost-popover}}
+
+{{#frost-button hook='siblingListBlockButton' size='small' priority='primary' class='block'}}
+  Block Text
+{{/frost-button}}
+{{#frost-popover
+  target='.block'
+  position='bottom'
+}}
+  <div class="inside">
+      <ul>
+        <li role='button' {{action 'onCreate' 'One'}}>One</li>
+        <li role='button' {{action 'onCreate' 'Two'}}>Two</li>
+        <li role='button' {{action 'onCreate' 'Three'}}>Three</li>
+      </ul>
+    </div>
+{{/frost-popover}}
+
+{{#frost-button hook='childListBlockButton' size='small' priority='primary' class='childblock'}}
+  Child Text
   {{#frost-popover
-    target='.list'
-    closest=true
+    target='.childblock'
     position='bottom'
   }}
     <div class="inside">
         <ul>
-          <li role='button' {{action 'onCreate' 'One'}}>One</li>
-          <li role='button' {{action 'onCreate' 'Two'}}>Two</li>
-          <li role='button' {{action 'onCreate' 'Three'}}>Three</li>
+          <li id="dog" role='button' {{action 'onCreate' 'Dog'}}>Dog</li>
+          <li id="cat" role='button' {{action 'onCreate' 'Cat'}}>Cat</li>
+          <li id="Horse" role='button' {{action 'onCreate' 'Horse'}}>Horse</li>
         </ul>
       </div>
   {{/frost-popover}}
 {{/frost-button}}
-
-<button>
-  <div class="inside">
-    <ul>
-      <li role='button' {{action 'onCreate' 'One'}}>One</li>
-      <li role='button' {{action 'onCreate' 'Two'}}>Two</li>
-      <li role='button' {{action 'onCreate' 'Three'}}>Three</li>
-    </ul>
-  </div>
-  My Test
-</button>
 
 <h2>Positions</h2>
 
