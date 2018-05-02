@@ -1,6 +1,6 @@
+import $ from 'jquery'
+import {run} from '@ember/runloop'
 import {expect} from 'chai'
-import Ember from 'ember'
-const {$, run} = Ember
 import wait from 'ember-test-helpers/wait'
 import {integration} from 'ember-test-utils/test-support/setup-component-test'
 import hbs from 'htmlbars-inline-precompile'

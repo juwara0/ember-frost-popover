@@ -1,7 +1,6 @@
-/* jshint expr:true */
+import $ from 'jquery'
+import {run} from '@ember/runloop'
 import {expect} from 'chai'
-import Ember from 'ember'
-const {$, run} = Ember
 import {unit} from 'ember-test-utils/test-support/setup-component-test'
 import {afterEach, beforeEach, describe, it} from 'mocha'
 import sinon from 'sinon'

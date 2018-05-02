@@ -1,11 +1,13 @@
-import Ember from 'ember'
+import $ from 'jquery'
+import Component from '@ember/component'
+import {run} from '@ember/runloop'
+import {typeOf, isPresent} from '@ember/utils'
 import {task, timeout} from 'ember-concurrency'
 import PropTypeMixin, {PropTypes} from 'ember-prop-types'
 
 import layout from '../templates/components/frost-popover'
 import {checkBottom, checkLeft, checkRight, checkTop} from './util'
 
-const {$, Component, isPresent, run, typeOf} = Ember
 const arrowMargin = 5
 const maxPlacementRetries = 5
 
