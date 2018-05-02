@@ -7,11 +7,11 @@
 .bowerrc
 .editorconfig
 .ember-cli
+<<<<<<< HEAD
 .eslintignore
 .eslintrc.js
 .github
 .gitignore
-.pullapprove.yml
 .travis
 .watchmanconfig
 .travis.yml
@@ -21,3 +21,8 @@ ember-cli-build.js
 jsconfig.json
 testem.js
 .idea
+
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try
